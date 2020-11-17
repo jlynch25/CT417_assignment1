@@ -13,11 +13,9 @@ public class Module {
     public Module() {
     }
 
-    public Module(String name, String id, ArrayList<Student> students, ArrayList<Course> courses) {
+    public Module(String name, String id) {
         this.name = name;
         this.id = id;
-        this.students = students;
-        this.courses = courses;
     }
 
     public String getName() {
@@ -50,6 +48,14 @@ public class Module {
 
     public void setCourses(ArrayList<Course> courses) {
         this.courses = courses;
+    }
+
+    public void addCourse(Course course) {
+        this.courses.add(course);
+    }
+    
+    public void addStudent(Student student) {
+        this.students.add(student);
     }
 
     public Module name(String name) {

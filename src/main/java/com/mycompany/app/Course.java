@@ -7,7 +7,7 @@ public class Course {
 
     private String name;
     private ArrayList<Module> modules;
-    private ArrayList<Student> student;
+    private ArrayList<Student> students;
     private DateTime start;
     private DateTime end;
 
@@ -16,10 +16,8 @@ public class Course {
     public Course() {
     }
 
-    public Course(String name, ArrayList<Module> modules, ArrayList<Student> student, DateTime start, DateTime end) {
+    public Course(String name,  DateTime start, DateTime end) {
         this.name = name;
-        this.modules = modules;
-        this.student = student;
         this.start = start;
         this.end = end;
     }
@@ -40,12 +38,12 @@ public class Course {
         this.modules = modules;
     }
 
-    public ArrayList<Student> getStudent() {
-        return this.student;
+    public ArrayList<Student> getStudents() {
+        return this.students;
     }
 
-    public void setStudent(ArrayList<Student> student) {
-        this.student = student;
+    public void setStudents(ArrayList<Student> student) {
+        this.students = student;
     }
 
     public DateTime getStart() {
@@ -64,6 +62,14 @@ public class Course {
         this.end = end;
     }
 
+    public void addModule(Module module) {
+        this.modules.add(module);
+    }
+
+    public void addStudent(Student student) {
+        this.students.add(student);
+    }
+
     public Course name(String name) {
         this.name = name;
         return this;
@@ -74,8 +80,8 @@ public class Course {
         return this;
     }
 
-    public Course student(ArrayList<Student> student) {
-        this.student = student;
+    public Course students(ArrayList<Student> students) {
+        this.students = students;
         return this;
     }
 
@@ -94,7 +100,7 @@ public class Course {
         return "{" +
             " name='" + getName() + "'" +
             ", modules='" + getModules() + "'" +
-            ", student='" + getStudent() + "'" +
+            ", student='" + getStudents() + "'" +
             ", start='" + getStart() + "'" +
             ", end='" + getEnd() + "'" +
             "}";

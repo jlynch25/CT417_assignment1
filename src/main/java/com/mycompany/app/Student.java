@@ -20,14 +20,12 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, int age, DateTime dob, int id, String username, ArrayList<Course> courses, ArrayList<Module> modules) {
+    public Student(String name, int age, DateTime dob, int id, String username) {
         this.name = name;
         this.age = age;
         this.dob = dob;
         this.id = id;
         this.username = username;
-        this.courses = courses;
-        this.modules = modules;
     }
 
     public String getName() {
@@ -84,6 +82,14 @@ public class Student {
 
     public void setModules(ArrayList<Module> modules) {
         this.modules = modules;
+    }
+
+    public void addCourse(Course course) {
+        this.courses.add(course);
+    }
+    
+    public void addModule(Module module) {
+        this.modules.add(module);
     }
 
     public Student name(String name) {
