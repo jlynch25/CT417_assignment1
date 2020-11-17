@@ -1,6 +1,6 @@
 package com.mycompany.app;
 
-import java.time.LocalDate;
+import org.joda.time.*;
 import java.util.ArrayList;
 
 // import org.joda.time;
@@ -9,7 +9,7 @@ public class Student {
     
     private String name;
     private int age;
-    private LocalDate dob;
+    private DateTime dob;
     private int id;
     private String username;
     private ArrayList<Course> courses;
@@ -20,7 +20,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, int age, LocalDate dob, int id, String username, ArrayList<Course> courses, ArrayList<Module> modules) {
+    public Student(String name, int age, DateTime dob, int id, String username, ArrayList<Course> courses, ArrayList<Module> modules) {
         this.name = name;
         this.age = age;
         this.dob = dob;
@@ -46,11 +46,11 @@ public class Student {
         this.age = age;
     }
 
-    public LocalDate getDob() {
+    public DateTime getDob() {
         return this.dob;
     }
 
-    public void setDob(LocalDate dob) {
+    public void setDob(DateTime dob) {
         this.dob = dob;
     }
 
@@ -96,7 +96,7 @@ public class Student {
         return this;
     }
 
-    public Student dob(LocalDate dob) {
+    public Student dob(DateTime dob) {
         this.dob = dob;
         return this;
     }
