@@ -36,19 +36,19 @@ public class ModuleTest {
         assertEquals(moduleName, module.getName());
         assertEquals(moduleID, module.getId());
 
-        // assertFalse(module.getStudents().contains(student));
+        assertFalse(module.getStudents().contains(student));
 
-        // module.addStudent(student);
+        module.addStudent(student);
 
-        // assertTrue(module.getStudents().contains(student));
+        assertTrue(module.getStudents().contains(student));
 
-        // assertEquals(0, module.getCourses().size());
-        // assertFalse(module.getCourses().contains(course));
+        assertEquals(0, module.getCourses().size());
+        assertFalse(module.getCourses().contains(course));
 
-        // module.addCourse(course);
+        module.addCourse(course);
 
-        // assertTrue(module.getCourses().contains(course));
+        assertTrue(module.getCourses().contains(course));
 
-        // assertEquals(1, module.getCourses().size());
+        assertEquals(1, module.getCourses().size());
     }
 }

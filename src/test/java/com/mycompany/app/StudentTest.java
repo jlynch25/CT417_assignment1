@@ -40,20 +40,20 @@ public class StudentTest {
         assertEquals(studentID, student.getId());
         assertEquals(studentUsername, student.getUsername());
     
-        // assertFalse(student.getCourses().contains(course));
+        assertFalse(student.getCourses().contains(course));
     
-        // student.addCourse(course);
+        student.addCourse(course);
 
-        // assertTrue(student.getCourses().contains(course));
+        assertTrue(student.getCourses().contains(course));
 
-        // assertEquals(0, student.getModules().size());
-        // assertFalse(student.getModules().contains(module));
+        assertEquals(0, student.getModules().size());
+        assertFalse(student.getModules().contains(module));
 
-        // student.addModule(module);
+        student.addModule(module);
 
-        // assertTrue(student.getModules().contains(module));
+        assertTrue(student.getModules().contains(module));
 
-        // assertEquals(1, student.getModules().size());
+        assertEquals(1, student.getModules().size());
     }
 
    

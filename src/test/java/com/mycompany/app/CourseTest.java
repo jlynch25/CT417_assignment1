@@ -37,20 +37,20 @@ public class CourseTest {
         assertEquals(courseStart, course.getStart());
         assertEquals(courseEnd, course.getEnd());
 
-        // assertFalse(course.getStudents().contains(student));
+        assertFalse(course.getStudents().contains(student));
 
-        // course.addStudent(student);
+        course.addStudent(student);
 
-        // assertTrue(course.getStudents().contains(student));
+        assertTrue(course.getStudents().contains(student));
 
-        // assertEquals(0, course.getModules().size());
-        // assertFalse(course.getModules().contains(module));
+        assertEquals(0, course.getModules().size());
+        assertFalse(course.getModules().contains(module));
 
-        // course.addModule(module);
+        course.addModule(module);
 
-        // assertTrue(course.getModules().contains(module));
+        assertTrue(course.getModules().contains(module));
 
-        // assertEquals(1, course.getModules().size());
+        assertEquals(1, course.getModules().size());
     }
     
 }
