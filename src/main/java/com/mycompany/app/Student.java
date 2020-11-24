@@ -12,9 +12,8 @@ public class Student {
     private DateTime dob;
     private int id;
     private String username;
-    private ArrayList<Course> courses;
-    private ArrayList<Module> modules;
-
+    private ArrayList<Course> courses = new ArrayList<Course>();
+    private ArrayList<Module> modules = new ArrayList<Module>();
 
 
     public Student() {
